@@ -1,3 +1,25 @@
 name: agent-negotiation-mcp
-description: MEOK AI Labs - Uagent negotiation
+description: MEOK AI Labs - AI Governance & Compliance
 version: 1.0.0
+tools:
+- name: propose_deal
+  description: ''
+  parameters:
+  - name: agent_a
+    type: string
+    required: true
+  - name: agent_b
+    type: string
+    required: true
+  - name: offer
+    type: object
+    required: true
+- name: evaluate_offer
+  description: ''
+  parameters:
+  - name: offer
+    type: object
+    required: true
+  - name: reservation_price
+    type: number
+    required: true

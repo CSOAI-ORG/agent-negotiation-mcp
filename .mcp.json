@@ -1,6 +1,49 @@
 {
   "name": "agent-negotiation-mcp",
-  "description": "MEOK AI Labs Uagent negotiation",
+  "description": "MEOK AI Labs - AI Governance & Compliance",
   "version": "1.0.0",
-  "author": "MEOK AI Labs"
+  "tools": [
+    {
+      "name": "propose_deal",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "agent_a": {
+            "type": "string"
+          },
+          "agent_b": {
+            "type": "string"
+          },
+          "offer": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "agent_a",
+          "agent_b",
+          "offer"
+        ]
+      }
+    },
+    {
+      "name": "evaluate_offer",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "offer": {
+            "type": "object"
+          },
+          "reservation_price": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "offer",
+          "reservation_price"
+        ]
+      }
+    }
+  ]
 }
