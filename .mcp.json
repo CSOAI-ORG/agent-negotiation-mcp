@@ -1,48 +1,125 @@
 {
   "name": "agent-negotiation-mcp",
-  "description": "MEOK AI Labs - AI Governance & Compliance",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Multi-agent negotiation framework. Propose deals, evaluate offers, run auctions, and optimize outcom",
   "version": "1.0.0",
   "tools": [
     {
       "name": "propose_deal",
-      "description": "",
+      "description": "Propose a deal between two agents with terms and pricing.",
       "parameters": {
         "type": "object",
         "properties": {
-          "agent_a": {
+          "proposer": {
             "type": "string"
           },
-          "agent_b": {
+          "receiver": {
             "type": "string"
           },
-          "offer": {
-            "type": "object"
+          "terms": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "deadline_hours": {
+            "type": "integer"
           }
         },
         "required": [
-          "agent_a",
-          "agent_b",
-          "offer"
+          "proposer",
+          "receiver",
+          "terms"
         ]
       }
     },
     {
       "name": "evaluate_offer",
-      "description": "",
+      "description": "Evaluate an offer using negotiation theory (BATNA, ZOPA, Nash).",
       "parameters": {
         "type": "object",
         "properties": {
-          "offer": {
-            "type": "object"
+          "price": {
+            "type": "number"
           },
           "reservation_price": {
+            "type": "number"
+          },
+          "best_alternative": {
+            "type": "number"
+          },
+          "urgency": {
             "type": "number"
           }
         },
         "required": [
-          "offer",
+          "price",
           "reservation_price"
         ]
+      }
+    },
+    {
+      "name": "counter_offer",
+      "description": "Submit a counter-offer on an existing negotiation.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "deal_id": {
+            "type": "string"
+          },
+          "agent": {
+            "type": "string"
+          },
+          "new_price": {
+            "type": "number"
+          },
+          "new_terms": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "deal_id",
+          "agent",
+          "new_price"
+        ]
+      }
+    },
+    {
+      "name": "run_auction",
+      "description": "Run a simulated auction. Bids as JSON: [{\"bidder\": \"A\", \"amount\": 100}, ...]",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "type": "string"
+          },
+          "starting_price": {
+            "type": "number"
+          },
+          "bids": {
+            "type": "string"
+          },
+          "auction_type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "item",
+          "starting_price",
+          "bids"
+        ]
+      }
+    },
+    {
+      "name": "negotiation_status",
+      "description": "Get status of a negotiation or list all active negotiations.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "deal_id": {
+            "type": "string"
+          }
+        },
+        "required": []
       }
     }
   ]

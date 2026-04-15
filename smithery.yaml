@@ -1,25 +1,75 @@
 name: agent-negotiation-mcp
-description: MEOK AI Labs - AI Governance & Compliance
+description: Multi-agent negotiation framework. Propose deals, evaluate offers, run
+  auctions, and optimize outcom
 version: 1.0.0
 tools:
 - name: propose_deal
-  description: ''
+  description: Propose a deal between two agents with terms and pricing.
   parameters:
-  - name: agent_a
+  - name: proposer
     type: string
     required: true
-  - name: agent_b
+  - name: receiver
     type: string
     required: true
-  - name: offer
-    type: object
+  - name: terms
+    type: string
     required: true
+  - name: price
+    type: number
+    required: false
+  - name: deadline_hours
+    type: integer
+    required: false
 - name: evaluate_offer
-  description: ''
+  description: Evaluate an offer using negotiation theory (BATNA, ZOPA, Nash).
   parameters:
-  - name: offer
-    type: object
+  - name: price
+    type: number
     required: true
   - name: reservation_price
     type: number
     required: true
+  - name: best_alternative
+    type: number
+    required: false
+  - name: urgency
+    type: number
+    required: false
+- name: counter_offer
+  description: Submit a counter-offer on an existing negotiation.
+  parameters:
+  - name: deal_id
+    type: string
+    required: true
+  - name: agent
+    type: string
+    required: true
+  - name: new_price
+    type: number
+    required: true
+  - name: new_terms
+    type: string
+    required: false
+- name: run_auction
+  description: 'Run a simulated auction. Bids as JSON: [{"bidder": "A", "amount":
+    100}, ...]'
+  parameters:
+  - name: item
+    type: string
+    required: true
+  - name: starting_price
+    type: number
+    required: true
+  - name: bids
+    type: string
+    required: true
+  - name: auction_type
+    type: string
+    required: false
+- name: negotiation_status
+  description: Get status of a negotiation or list all active negotiations.
+  parameters:
+  - name: deal_id
+    type: string
+    required: false
