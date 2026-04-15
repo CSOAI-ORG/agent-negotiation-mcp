@@ -1,0 +1,57 @@
+{
+  "name": "agent-negotiation",
+  "description": "Multi-agent negotiation framework. Propose deals, evaluate offers, run auctions, and optimize outcomes. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/agent-negotiation-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "propose_deal",
+      "description": "Propose a deal between two agents with terms and pricing."
+    },
+    {
+      "name": "evaluate_offer",
+      "description": "Evaluate an offer using negotiation theory (BATNA, ZOPA, Nash)."
+    },
+    {
+      "name": "counter_offer",
+      "description": "Submit a counter-offer on an existing negotiation."
+    },
+    {
+      "name": "run_auction",
+      "description": "Run a simulated auction. Bids as JSON: [{\"bidder\": \"A\", \"amount\": 100}, ...]"
+    },
+    {
+      "name": "negotiation_status",
+      "description": "Get status of a negotiation or list all active negotiations."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Agent Infrastructure"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
