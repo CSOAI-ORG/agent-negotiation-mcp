@@ -9,5 +9,6 @@
   },
   "dependencies": {
     "mcp": "^1.0.0"
-  }
+  },
+  "description": "AI-powered agent negotiation MCP server for agents. Supports propose deal, evaluate offer, counter offer. By MEOK AI Labs."
 }

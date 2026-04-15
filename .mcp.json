@@ -1,6 +1,6 @@
 {
   "name": "agent-negotiation-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Multi-agent negotiation framework. Propose deals, evaluate offers, run auctions, and optimize outcom",
+  "description": "AI-powered agent negotiation MCP server for agents. Supports propose deal, evaluate offer, counter offer. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
