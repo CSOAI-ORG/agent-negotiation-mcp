@@ -42,6 +42,15 @@ def propose_deal(proposer: str, receiver: str, terms: str, price: float = 0, dea
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        proposer (str): The proposer to analyze or process.
+        receiver (str): The receiver to analyze or process.
+        terms (str): The terms to analyze or process.
+        price (float): The price to analyze or process.
+        deadline_hours (int): The deadline hours to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -108,6 +117,14 @@ def evaluate_offer(price: float, reservation_price: float, best_alternative: flo
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        price (float): The price to analyze or process.
+        reservation_price (float): The reservation price to analyze or process.
+        best_alternative (float): The best alternative to analyze or process.
+        urgency (float): The urgency to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -182,6 +199,14 @@ def counter_offer(deal_id: str, agent: str, new_price: float, new_terms: str = "
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        deal_id (str): The deal id to analyze or process.
+        agent (str): The agent to analyze or process.
+        new_price (float): The new price to analyze or process.
+        new_terms (str): The new terms to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -254,7 +279,14 @@ def run_auction(item: str, starting_price: float, bids: str, auction_type: str =
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
-    """
+    
+
+    Args:
+        item (str): The item to analyze or process.
+        starting_price (float): The starting price to analyze or process.
+        bids (str): The bids to analyze or process.
+        auction_type (str): The auction type to analyze or process.
+        api_key (str): The api key to analyze or process."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -324,6 +356,11 @@ def negotiation_status(deal_id: str = "", api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        deal_id (str): The deal id to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
