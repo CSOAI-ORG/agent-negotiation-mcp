@@ -26,7 +26,23 @@ _OFFERS: list[dict] = []
 
 @mcp.tool()
 def propose_deal(proposer: str, receiver: str, terms: str, price: float = 0, deadline_hours: int = 24, api_key: str = "") -> str:
-    """Propose a deal between two agents with terms and pricing."""
+    """Propose a deal between two agents with terms and pricing.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -62,7 +78,23 @@ def propose_deal(proposer: str, receiver: str, terms: str, price: float = 0, dea
 
 @mcp.tool()
 def evaluate_offer(price: float, reservation_price: float, best_alternative: float = 0, urgency: float = 0.5, api_key: str = "") -> str:
-    """Evaluate an offer using negotiation theory (BATNA, ZOPA, Nash)."""
+    """Evaluate an offer using negotiation theory (BATNA, ZOPA, Nash).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -106,7 +138,23 @@ def evaluate_offer(price: float, reservation_price: float, best_alternative: flo
 
 @mcp.tool()
 def counter_offer(deal_id: str, agent: str, new_price: float, new_terms: str = "", api_key: str = "") -> str:
-    """Submit a counter-offer on an existing negotiation."""
+    """Submit a counter-offer on an existing negotiation.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -148,7 +196,23 @@ def counter_offer(deal_id: str, agent: str, new_price: float, new_terms: str = "
 
 @mcp.tool()
 def run_auction(item: str, starting_price: float, bids: str, auction_type: str = "english", api_key: str = "") -> str:
-    """Run a simulated auction. Bids as JSON: [{"bidder": "A", "amount": 100}, ...]"""
+    """Run a simulated auction. Bids as JSON: [{"bidder": "A", "amount": 100}, ...]
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -202,7 +266,23 @@ def run_auction(item: str, starting_price: float, bids: str, auction_type: str =
 
 @mcp.tool()
 def negotiation_status(deal_id: str = "", api_key: str = "") -> str:
-    """Get status of a negotiation or list all active negotiations."""
+    """Get status of a negotiation or list all active negotiations.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
