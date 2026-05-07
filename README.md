@@ -1,3 +1,5 @@
+[![agent-negotiation-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/agent-negotiation-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/agent-negotiation-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/agent-negotiation-mcp)](https://github.com/CSOAI-ORG/agent-negotiation-mcp/stargazers)
