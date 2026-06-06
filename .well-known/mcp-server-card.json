@@ -1,0 +1,6 @@
+{
+  "serverInfo": { "name": "agent-negotiation-mcp", "version": "1.0.0" },
+  "tools": [
+    {"name": "propose_deal", "description": "MCP tool from MEOK AI Labs"}, {"name": "evaluate_offer", "description": "MCP tool from MEOK AI Labs"}, {"name": "counter_offer", "description": "MCP tool from MEOK AI Labs"}, {"name": "run_auction", "description": "MCP tool from MEOK AI Labs"}, {"name": "negotiation_status", "description": "MCP tool from MEOK AI Labs"}
+  ]
+}

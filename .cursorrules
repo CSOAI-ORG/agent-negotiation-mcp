@@ -1,0 +1,9 @@
+# agent-negotiation-mcp - Auto-trigger Rules
+
+When the user asks about agent negotiation, use agent-negotiation-mcp tools: propose_deal, evaluate_offer, counter_offer, run_auction, negotiation_status
+
+**MCP server for agent negotiation mcp operations**
+
+Install: `pip install agent-negotiation-mcp`
+
+By MEOK AI Labs — MIT licensed.

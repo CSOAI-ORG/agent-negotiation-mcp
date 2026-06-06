@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Agent Negotiation MCP — MEOK AI Labs. Multi-agent negotiation protocols, deal evaluation, and strategy."""
+"""
+Agent Negotiation MCP — MEOK AI Labs. Multi-agent negotiation protocols, deal evaluation, and strategy."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json, hashlib, time, math
@@ -68,7 +68,7 @@ def propose_deal(proposer: str, receiver: str, terms: str, price: float = 0, dea
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     deal_id = f"deal-{hashlib.sha256(f'{proposer}{receiver}{time.time_ns()}'.encode()).hexdigest()[:12]}"
@@ -142,7 +142,7 @@ def evaluate_offer(price: float, reservation_price: float, best_alternative: flo
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     batna = best_alternative if best_alternative > 0 else reservation_price * 0.7
@@ -224,7 +224,7 @@ def counter_offer(deal_id: str, agent: str, new_price: float, new_terms: str = "
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     if deal_id not in _NEGOTIATIONS:
@@ -289,7 +289,7 @@ def run_auction(item: str, starting_price: float, bids: str, auction_type: str =
         api_key (str): The api key to analyze or process."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     try:
@@ -378,7 +378,7 @@ def negotiation_status(deal_id: str = "", api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     if deal_id:
@@ -390,5 +390,8 @@ def negotiation_status(deal_id: str = "", api_key: str = "") -> str:
     return {"active_negotiations": active, "total": len(active)}
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
