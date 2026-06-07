@@ -1,0 +1,68 @@
+{
+  "name": "agent-negotiation-mcp",
+  "description": "Agent Negotiation MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/agent-negotiation-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "propose_deal",
+      "name": "Propose Deal",
+      "description": "propose_deal via agent-negotiation-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "evaluate_offer",
+      "name": "Evaluate Offer",
+      "description": "evaluate_offer via agent-negotiation-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "counter_offer",
+      "name": "Counter Offer",
+      "description": "counter_offer via agent-negotiation-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "run_auction",
+      "name": "Run Auction",
+      "description": "run_auction via agent-negotiation-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "negotiation_status",
+      "name": "Negotiation Status",
+      "description": "negotiation_status via agent-negotiation-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "agent-negotiation-mcp",
+    "description": "Agent Negotiation MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "agent-negotiation-mcp"
+      }
+    ],
+    "capabilities": [
+      "propose_deal",
+      "evaluate_offer",
+      "counter_offer",
+      "run_auction",
+      "negotiation_status"
+    ]
+  }
+}
