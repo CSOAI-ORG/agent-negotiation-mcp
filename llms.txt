@@ -1,0 +1,32 @@
+# Agent Negotiation MCP
+
+> Multi-agent negotiation framework
+
+`agent-negotiation-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+
+## Install
+
+```bash
+pip install agent-negotiation-mcp
+```
+
+Or run without installing:
+
+```bash
+uvx agent-negotiation-mcp
+```
+
+## Tools
+
+- `propose_deal` — Propose a deal between two agents with terms and pricing.
+- `evaluate_offer` — Evaluate an offer using negotiation theory (BATNA, ZOPA, Nash).
+- `counter_offer` — Submit a counter-offer on an existing negotiation.
+- `run_auction` — Run a simulated auction. Bids as JSON: [{"bidder": "A", "amount": 100}, ...]
+- `negotiation_status` — Get status of a negotiation or list all active negotiations.
+
+## Links
+
+- Source: https://github.com/CSOAI-ORG/agent-negotiation-mcp
+- PyPI: https://pypi.org/project/agent-negotiation-mcp/
+- MEOK AI Labs: https://meok.ai
+- Council of AI: https://councilof.ai
