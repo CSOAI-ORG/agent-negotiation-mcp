@@ -1,0 +1,5 @@
+{
+  "buildCommand": "echo 'static deploy'",
+  "outputDirectory": ".",
+  "framework": null
+}
