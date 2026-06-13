@@ -1,5 +1,10 @@
 {
   "buildCommand": "echo 'static deploy'",
   "outputDirectory": ".",
-  "framework": null
+  "framework": null,
+  "functions": {
+    "**/*.py": {
+      "excludeFiles": "server.py"
+    }
+  }
 }
