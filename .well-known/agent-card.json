@@ -1,0 +1,117 @@
+{
+  "name": "Meok Mcp",
+  "version": "1.0.0",
+  "url": "https://mcp.meok.ai/meok-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "Meok Mcp — a MEOK compliance MCP, exposed over A2A.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "propose_deal",
+      "name": "Propose Deal",
+      "description": "MCP tool from MEOK AI Labs",
+      "tags": [
+        "compliance",
+        "a2a"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "evaluate_offer",
+      "name": "Evaluate Offer",
+      "description": "MCP tool from MEOK AI Labs",
+      "tags": [
+        "compliance",
+        "a2a"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "counter_offer",
+      "name": "Counter Offer",
+      "description": "MCP tool from MEOK AI Labs",
+      "tags": [
+        "compliance",
+        "a2a"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "run_auction",
+      "name": "Run Auction",
+      "description": "MCP tool from MEOK AI Labs",
+      "tags": [
+        "compliance",
+        "a2a"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "negotiation_status",
+      "name": "Negotiation Status",
+      "description": "MCP tool from MEOK AI Labs",
+      "tags": [
+        "compliance",
+        "a2a"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai/developers",
+  "x-meok": {
+    "mcp_name": "meok-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}

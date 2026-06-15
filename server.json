@@ -4,9 +4,9 @@
   "version": "1.0.9",
   "description": "Agent Negotiation MCP Server by MEOK AI Labs",
   "repository": {
-    "type": "git",
     "url": "https://github.com/CSOAI-ORG/agent-negotiation-mcp",
-    "source": "https://github.com/CSOAI-ORG/agent-negotiation-mcp"
+    "source": "github",
+    "id": "1210302652"
   },
   "packages": [
     {
